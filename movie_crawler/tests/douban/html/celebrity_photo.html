@@ -1,0 +1,1520 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="ua-mac ua-webkit">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit">
+
+    <title>
+    周杰伦 Jay Chou 图片
+</title>
+    
+    <meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+    
+    <meta name="keywords" content="周杰伦 Jay Chou,图片"/>
+    <meta name="description" content="jay chou"/>
+
+    
+
+
+    <link rel="apple-touch-icon" href="/pics/movie/apple-touch-icon.png">
+    <link href="http://img3.douban.com/f/shire/b744ecd0276b46482458cb4ecaee3f256902adec/css/douban.css" rel="stylesheet" type="text/css">
+    <link href="http://img3.douban.com/f/shire/5e59c6681e44822c17b55707cb614022306358b7/css/separation/_all.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">var _head_start = new Date();</script>
+    <script type="text/javascript" src="http://img3.douban.com/f/movie/e9d9543ebc06f2964039a2e94898f84ce77fc070/js/movie/lib/jquery.js"></script>
+    <script type="text/javascript" src="http://img3.douban.com/f/shire/6072cbd9e3d56db50f819890f57164950110117c/js/douban.js"></script>
+    <script type="text/javascript" src="http://img3.douban.com/f/shire/edd963ebd2d664b02e07affb6d4db29ac3e41a73/js/separation/_all.js"></script>
+    
+  <script type="text/javascript" src="http://img3.douban.com/f/shire/61dea57acc38f6e00cc187be26176dc7636ee099/js/do.js" data-cfg-autoload="false"></script>
+
+    <style type="text/css"></style>
+    <script type="text/javascript">
+    $(function () {
+        var slide_step = 4,
+            slide_li_num = 3,
+            slide_width = 267,
+            slide_prev_time = 0,
+            slide_next_time = 0,
+            current_index = 159,
+            total_index = 191,
+            slide_li = '.slide-wrap li',
+            $slide_wrap = $('.slide-wrap ul'),
+            $prev_btn = $('.btn-prev'),
+            $next_btn = $('.btn-next'),
+            $prev_a = $('.btn-prev a'),
+            $next_a = $('.btn-next a'),
+            slide_li_templ = '<li id="{PHOTO_ID}"><a href="{PHOTO_PATH}"><img src="{IMG_PATH}" alt="" /></a></li>',
+            slide_void_templ = '<li><a href="javascript:void(0)"></a></li>',
+            slide_new_array = [],
+            slideAnimate = function (d) {
+                var step = d ? '+=' + slide_width + 'px' : '-=' + slide_width + 'px';
+                $slide_wrap.animate({'left': step}, 'slow');
+            },
+            slide_btn_switch = function () {
+                $prev_a.removeClass();
+                $next_a.removeClass();
+                if (current_index < 2) {
+                    $prev_a.addClass('dis');
+                }
+                if (current_index >= total_index - 2) {
+                    $next_a.addClass('dis');
+                }
+            },
+            getPhotos = function (current_id, direction) {
+                $.getJSON(
+                   '/j/slide_photos',
+                   {'pid':current_pid, 'relative':direction},
+                   function (data) {
+                       slide_new_array = [];
+                       $.each(data.photos, function (i, n) {
+                           if (n.id) {
+                               slide_new_array[i] = slide_li_templ.replace('{IMG_PATH}', n.icon)
+                                   .replace('{PHOTO_PATH}', n.path)
+                                   .replace('{PHOTO_ID}', n.id);
+                           } else {
+                               slide_new_array[i] = slide_void_templ;
+                           }
+                       });
+                       if (direction === 'left') {
+                           $slide_wrap.prepend(slide_new_array.join(''));
+                       } else {
+                           $slide_wrap.append(slide_new_array.join(''));
+                           slideAnimate();
+                       }
+                   }
+               );
+           };
+
+       $prev_btn.click(function () {
+           if (!$('a', this).attr('class')) {
+               if (slide_next_time < 1) {
+                   current_pid = $(slide_li).eq(slide_step).attr('id');
+                   getPhotos(current_pid, 'left');
+               } else {
+                   slideAnimate(1);
+               }
+               slide_prev_time += 1;
+               slide_step -= slide_li_num;
+               current_index -= slide_li_num;
+               if (slide_next_time !== 0) {
+                   slide_next_time -= 1;
+               }
+               slide_btn_switch();
+               return false;
+           } else { return false; }
+       });
+       $next_btn.click(function () {
+           if (!$('a', this).attr('class')) {
+               if (slide_prev_time < 1) {
+                   current_pid = $(slide_li).eq(slide_step).attr('id');
+                   getPhotos(current_pid, 'right');
+               } else {
+                   slideAnimate();
+               }
+               slide_next_time += 1;
+               current_index += slide_li_num;
+               slide_step += slide_li_num;
+               if (slide_prev_time !== 0) {
+                   slide_prev_time -= 1;
+               }
+               slide_btn_switch();
+               return false;
+           } else { return false; }
+       });
+    });
+    var images = new Array();
+    function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments[i];
+        }
+    };
+    preload(
+        "http://img3.douban.com/view/photo/photo/public/p826255312.jpg",
+            "http://img3.douban.com/view/photo/photo/public/p826255294.jpg",
+            "http://img3.douban.com/view/photo/photo/public/p826261674.jpg"
+    );
+</script>
+    <link rel="stylesheet" href="http://img3.douban.com/misc/mixed_static/5a3596335a82fce6.css">
+
+    <link rel="shortcut icon" href="http://img3.douban.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+    <script type="text/javascript">var _body_start = new Date();</script>
+
+    
+
+    
+   
+
+
+
+
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+
+
+
+
+
+
+<div class="top-nav-info">
+    
+
+    <span class="perf-metric"><!-- _performtips_ --></span>
+    <ul>
+       
+       <li><a id="top-nav-doumail-link" href="http://www.douban.com/doumail/">豆邮<em>(4)</em></a></li>
+       <li class="nav-user-account">
+       <a target="_blank" href="http://www.douban.com/accounts/" class="bn-more"><span>吉吉于的帐号</span><span class="arrow"></span></a>
+       <div class="more-items">
+      <table cellpadding="0" cellspacing="0">
+            <tr><td><a href="http://www.douban.com/mine/">我的豆瓣</a></td></tr>
+            <tr><td><a target="_blank" href="http://www.douban.com/accounts/">我的帐号</a></td></tr>
+            <tr><td><a href="http://www.douban.com/accounts/logout?source=movie&amp;ck=NOUW">退出</a></td></tr>
+         </table>
+       </div>
+
+       </li>
+     </ul>
+</div>
+
+
+    <div class="top-nav-reminder" >
+        <a href="http://www.douban.com/notification/" class="lnk-remind">提醒
+        </a>
+    <div id="top-nav-notimenu" class="more-items">
+      <div class="bd">
+          <p>加载中...</p>
+      </div>
+    </div>
+    </div>
+    
+
+    <div class="global-nav-items">
+      <ul>
+          
+            
+            <li>
+            <a href="http://www.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-main&#34;,&#34;uid&#34;:&#34;56579101&#34;}">豆瓣</a>
+            </li>
+          
+            
+            <li>
+            <a href="http://book.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-book&#34;,&#34;uid&#34;:&#34;56579101&#34;}">读书</a>
+            </li>
+          
+            
+            <li class="on">
+            <a href="http://movie.douban.com/" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-movie&#34;,&#34;uid&#34;:&#34;56579101&#34;}">电影</a>
+            </li>
+          
+            
+            <li>
+            <a href="http://music.douban.com/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-music&#34;,&#34;uid&#34;:&#34;56579101&#34;}">音乐</a>
+            </li>
+          
+            
+            <li>
+            <a href="http://www.douban.com/location/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-location&#34;,&#34;uid&#34;:&#34;56579101&#34;}">同城</a>
+            </li>
+          
+            
+            <li>
+            <a href="http://www.douban.com/group/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-group&#34;,&#34;uid&#34;:&#34;56579101&#34;}">小组</a>
+            </li>
+          
+            
+            <li>
+            <a href="http://read.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-read&#34;,&#34;uid&#34;:&#34;56579101&#34;}">阅读</a>
+            </li>
+          
+            
+            <li>
+            <a href="http://douban.fm/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-fm&#34;,&#34;uid&#34;:&#34;56579101&#34;}">豆瓣FM</a>
+            </li>
+          
+            
+            <li>
+            <a href="http://dongxi.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-commodity&#34;,&#34;uid&#34;:&#34;56579101&#34;}">东西</a>
+            </li>
+          
+            <li>
+              <a href="#more" class="bn-more"><span>更多</span></a>
+              <div class="more-items">
+                <table cellpadding="0" cellspacing="0">
+                    
+                    <tr><td><a href="http://9.douban.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-9&#34;,&#34;uid&#34;:&#34;56579101&#34;}">九点</a></td></tr>
+                    
+                    <tr><td><a href="http://alphatown.com" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-town&#34;,&#34;uid&#34;:&#34;56579101&#34;}">阿尔法城</a></td></tr>
+                    
+                    <tr><td><a href="http://www.douban.com/mobile/" target="_blank" data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-mobile&#34;,&#34;uid&#34;:&#34;56579101&#34;}">移动应用</a></td></tr>
+                </table>
+              </div>
+            </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+   
+
+
+
+
+
+
+
+
+<div id="db-nav-movie" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="http://movie.douban.com">豆瓣电影</a>
+    </div>
+    <div class="nav-search">
+      <form action="http://movie.douban.com/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">电影、影人、影院、电视剧</label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1002" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+      
+      <div class="nav-items nav-logged-in">
+          <ul>
+                 
+                     <li><a href="http://movie.douban.com/mine">我看</a></li>
+                 
+                     <li><a href="http://movie.douban.com/nowplaying/">影讯&amp;购票</a></li>
+                 
+                    <li class="site-nav-bt" style="margin-right:10px">
+                        <a href="http://movie.douban.com/explore">选电影</a>
+                        <img id="gaiaEgg" src="http://img3.douban.com/pics/movie/events/gaia/egg2.gif"/>
+                        <style> #gaiaEgg{ position: relative; top: -4px; left: -3px; width: 20px;} </style>
+                    </li>
+                 
+                    
+                    <li class="site-nav-bt">
+                        <a href="http://movie.douban.com/tv/">电视剧</a>
+                    </li>
+                 
+                     <li><a href="http://movie.douban.com/chart">排行榜</a></li>
+                 
+                     <li><a href="http://movie.douban.com/tag/">分类</a></li>
+                 
+                            <li><a href="http://movie.douban.com/review/best/">影评</a></li>
+                 
+                     <li class="site-nav-bt"><a href="http://movie.douban.com/trailers">预告片</a></li>
+                 
+                    <li class="site-nav-bt">
+                        <a href="http://movie.douban.com/askmatrix/hot_questions/all">问答</a>
+                    </li>
+          
+          </ul>
+      </div>
+  </div>
+</div>
+
+  
+  <script id="suggResult" type="text/x-jquery-tmpl">
+      <li data-link="{{= url}}">
+          <a href="{{= url}}">
+              <img src="{{= img}}" width="40" />
+              <p>
+                  <em>{{= title}}</em>
+                  {{if year}}
+                      <span>{{= year}}</span>
+                  {{/if}}
+                  {{if sub_title}}
+                      <br /><span>{{= sub_title}}</span>
+                  {{/if}}
+                  {{if address}}
+                      <br /><span>{{= address}}</span>
+                  {{/if}}
+                  {{if episode}}
+                      {{if episode=="unknow"}}
+                          <br /><span>集数未知</span>
+                      {{else}}
+                          <br /><span>共{{= episode}}集</span>
+                      {{/if}}
+                  {{/if}}
+              </p>
+          </a>
+      </li>
+  </script>
+  
+
+
+
+
+
+    
+    <div id="wrapper">
+        
+
+        
+    <div id="content">
+        
+    <h1>周杰伦 Jay Chou的图片</h1>
+
+        <div class="grid-16-8 clearfix">
+            
+            
+            <div class="article">
+                
+    <div class="opt-bar-line clearfix">
+        <a name="photo" id="photo"></a>
+        <span class="opt-left">
+            第160张/共191张
+        </span>
+        <span class="opt-mid">
+            <a href="http://movie.douban.com/celebrity/1048000/photo/826261674/#photo" title="用方向键←可以向前翻页" id="pre_photo">上一张</a>&nbsp;/&nbsp;<a href="http://movie.douban.com/celebrity/1048000/photo/826255294/#photo" title="用方向键→可以向后翻页" id="next_photo">下一张</a>
+        </span>
+        <span class="fright">
+            &gt;&nbsp;
+                <a href="http://movie.douban.com/celebrity/1048000/photos/">浏览所有图片</a>
+        </span>
+    </div>
+    <script src="http://img3.douban.com/f/shire/c5e95e394db3b96740b16651e01f27f51ebe34c0/js/photo_turn_page.js"></script>
+    <style>
+    .grid-16-8 .article {width:600px; padding-right:30px}
+    .photo-show {text-align:center;}
+    .photo-wp {position: relative; display:inline-block; *display:inline; *zoom:1;}
+    .photo-show img {display:block}
+    .photo-zoom,.photo-zoom:hover{display:none; text-indent:-999em; overflow:hidden; position:absolute; right:0; bottom:0; height:32px; width:32px; background:url(/pics/icon_zoom_in.png);}
+    </style>
+    <script>
+        $(function(){
+            $(".photo-wp").hover(function(){
+                $(".photo-zoom").show();
+            },function(){
+                $(".photo-zoom").hide();
+            })
+        })
+    </script>
+
+    <div class="photo-show">
+    <div class="photo-wp">
+        <a class="mainphoto" href="http://movie.douban.com/celebrity/1048000/photo/826255294/#photo" title="点击查看下一张">
+            <img src="http://img3.douban.com/view/photo/photo/public/p826255312.jpg" />
+        </a>
+        <a class="photo-zoom " target="_blank" onclick="moreurl(this, {celebrity_raw: '826255312'})" href="http://img3.douban.com/view/photo/raw/public/p826255312.jpg" rel="nofollow" title="查看原图">查看原图</a>
+    </div>
+    </div>
+
+        <div class="photo_descri">
+            <div class="edtext pl">jay chou</div>
+        </div>
+
+    <div class="clearfix">
+        <span class="update magnifier">
+            <a class="" target="_blank" onclick="moreurl(this, {celebrity_raw: '826255312'})" rel="nofollow" href="http://img3.douban.com/view/photo/raw/public/p826255312.jpg">查看原图</a>
+        <span class="update">
+                <span class="gact">&gt; <a href="/misc/cp_report?type=C&uid=826255312" rel="nofollow" title= "这张图片有问题" >这张图片有问题</a></span>
+        </span>
+        
+
+
+
+
+        <script type="text/javascript">
+            Do.add('dialog-css', {path: "http://img3.douban.com/f/shire/ae32cb8310a09ba836b958b79d2cd1e706db2fed/css/ui/dialog.css",
+                type: 'css'})
+            Do.add('dialog', {path: "http://img3.douban.com/f/shire/4b3bad5e25de78678d700dd5353570dce3e6bbcc/js/ui/dialog.js", type: 'js',
+                requires: ['dialog-css']})
+            Do.add('textarea-mention-default-style', {
+                path: "http://img3.douban.com/f/shire/0c51d20cdb4bbc9176979ed51c3ae0a97d17caca/css/lib/textarea-mention.css", type: 'css'})
+            Do.add('textarea-mention', {
+                path: "http://img3.douban.com/f/shire/d84b0a3d6a78f5b4045762602d2a4a6b6d9d005e/js/lib/textarea-mention.js", type: 'js',
+                requires: ['mustache', 'textarea-mention-default-style']})
+            Do.add('mustache', {path: "http://img3.douban.com/f/shire/53987f545e607057b2cdd858e9576ef0f88e66ad/js/lib/mustache.js", type: 'js'})
+            Do.add('movie-share-css', {path: "http://img3.douban.com/f/movie/8c691ad30ef096a9391d40709859a0ad1a8bfba3/css/movie/share.css",
+                type: 'css'})
+            Do.add('movie:share', {path: "http://img3.douban.com/f/movie/ff9a1e71fbe846faa19f325ccc4c0c88d3a06fd6/js/movie/share.js", type: 'js',
+                requires: ['dialog', 'textarea-mention', 'movie-share-css']})
+            Do('movie:share')
+        </script>
+
+<div class="rec-sec">
+<span class="rec">
+    <script id="movie-share" type="text/x-html-snippet">
+        
+    <form class="movie-share" action="/j/share" method="POST"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+        <div class="clearfix form-bd">
+            <div class="input-area">
+                <textarea name="text" class="share-text" cols="72" data-mention-api="https://api.douban.com/shuo/in/complete?alt=xd&amp;callback=?"></textarea>
+                <input type="hidden" name="target-id" value="826255312">
+                <input type="hidden" name="target-type" value="4">
+                <input type="hidden" name="title" value="周杰伦 Jay Chou的照片">
+                <input type="hidden" name="desc" value="jay chou">
+                <input type="hidden" name="redir" value="http://movie.douban.com/celebrity/1048000/photo/826255312/vote?ck=NOUW"/>
+                <div class="mentioned-highlighter"></div>
+            </div>
+
+            <div class="info-area">
+                    <img class="media" src="http://img3.douban.com/view/photo/photo/public/p826255312.jpg" />
+                <strong>周杰伦 Jay Chou的照片</strong>
+                <p>jay chou</p>
+                <p class="error server-error">&nbsp;</p>
+            </div>
+        </div>
+        <div class="form-ft">
+            <div class="form-ft-inner">
+                
+
+
+
+
+<div class="sync-setting pl">
+    <label>分享到</label>
+
+        
+        <label class="share-label" for="share-sina">
+            <input type="checkbox" value="sina" name="share-sina" id="share-sina" checked />新浪微博
+        </label>
+
+
+            <a id="lnk-sync-setting" class="no-visited no-hover" href="http://movie.douban.com/settings/sync" target="_blank"
+                class="pl share-label rr">分享设置<img src="http://img3.douban.com/pics/movie-sns-sync-setting.png"
+                alt="同步设置" /></a>
+
+</div>
+
+<style type="text/css">
+    .sync-setting {
+        float: left;
+    }
+    #lnk-sync-setting,
+    #lnk-sync-setting:hover,
+    #lnk-sync-setting:visited {
+        vertical-align: middle;
+        color: #0192b5;
+        background: none;
+        line-height: 27px;
+        margin-right: 8px;
+    }
+    #lnk-sync-setting img {
+        vertical-align: baseline;
+        *vertical-align: middle;
+        opacity: .5;
+        filter: alpha(opacity=50);
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        *display: inline;
+        zoom: 1;
+        position: relative;
+        top: 1px;
+        margin-left: 5px;
+    }
+    #lnk-sync-setting:hover img {
+        opacity: .8;
+        background: none;
+        filter: alpha(opacity=80);
+    }
+    .share-label {
+        margin: 8px;
+        cursor: pointer;
+        vertical-align: middle;
+        *vertical-align: text-bottom;
+    }
+    .interest-form-ft .share-label input {
+        margin-bottom: 0;
+    }
+    .interest-form-ft {
+        text-align: right;
+    }
+    .interest-form-ft .bn-flat {
+        float: none;
+    }
+    .interest-form-ft .sync-setting {
+        float: left;
+        line-height: 25px;
+    }
+</style>
+
+
+                <span class="avail-num-indicator">140</span>
+                <span class="bn-flat">
+                    <input type="submit" value="推荐" />
+                </span>
+            </div>
+        </div>
+    </form>
+    
+    <div id="suggest-mention-tmpl" style="display:none;">
+        <ul>
+            {{#users}}
+            <li id="{{uid}}"><img src="{{avatar}}"
+            >{{{username}}}&nbsp;<span>({{{uid}}})</span></li>
+            {{/users}}
+        </ul>
+    </div>
+
+
+    </script>
+
+        
+        <a href="#" data-share-dialog="#movie-share" data-dialog-title="推荐图片" class="lnk-sharing" share-id="826255312" data-mode="plain" data-name="周杰伦 Jay Chou的照片" data-type="" data-desc="jay chou" data-href="http://movie.douban.com/celebrity/1048000/photo/826255312/" data-image="http://img3.douban.com/view/photo/photo/public/p826255312.jpg" data-properties="{}" data-redir="http://movie.douban.com/celebrity/1048000/photo/826255312/vote?ck=NOUW" data-text="" data-apikey="" data-curl="" data-count="10" data-object_kind="1025" data-object_id="826255312" data-target_type="rec" data-target_action="2" data-action_props="{&#34;photo_type&#34;:&#34;影人图片&#34;,&#34;celebrity_url&#34;:&#34;http:\/\/movie.douban.com\/celebrity\/1048000\/&#34;,&#34;celebrity_name&#34;:&#34;周杰伦 Jay Chou&#34;,&#34;photo_url&#34;:&#34;http:\/\/movie.douban.com\/celebrity\/1048000\/photo\/826255312\/&#34;}" >推荐</a>
+</span>
+
+        <span class="rec-num">7人</span>
+
+</div>
+
+
+
+
+
+    </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="comments" class="">
+
+
+
+
+
+    
+
+<div class="comment-item" id=69209375 data-cid="69209375" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/lulusea/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u37241630-144.jpg" alt="Aubrey"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2011-05-15 09:31:10</span>
+          <a href="http://movie.douban.com/people/lulusea/" class="  ">Aubrey</a>  (Rocking in a shy way.)
+        </div>
+
+
+        
+        <p class="">好有的侧面！</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u37241630 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="69209375" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除Aubrey的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=70139930 data-cid="70139930" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/4528157/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u4528157-27.jpg" alt="暁暁暁女子"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2011-05-22 19:21:52</span>
+          <a href="http://movie.douban.com/people/4528157/" class="  ">暁暁暁女子</a>  (【西昌人家家庭客栈】开淘宝啦~~)
+        </div>
+
+
+        
+        <p class="">杰伦</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u4528157 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="70139930" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除暁暁暁女子的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=85188922 data-cid="85188922" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/HansMelone/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u35859918-4.jpg" alt="寒逝明伦"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2011-10-02 13:26:06</span>
+          <a href="http://movie.douban.com/people/HansMelone/" class="  ">寒逝明伦</a> 
+        </div>
+
+
+        
+        <p class="">唉哟不错屌爆了</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u35859918 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="85188922" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除寒逝明伦的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=85972152 data-cid="85972152" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/monster-yy/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u2379056-17.jpg" alt="丫丫怪"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2011-10-11 03:03:12</span>
+          <a href="http://movie.douban.com/people/monster-yy/" class="  ">丫丫怪</a> 
+        </div>
+
+
+        
+        <p class="">哈哈，还好小伙子鼻子长得好。</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u2379056 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="85972152" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除丫丫怪的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=92030200 data-cid="92030200" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/huiguang1214/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/user_normal.jpg" alt="[已注销]"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2011-12-20 17:50:44</span>
+          <a href="http://movie.douban.com/people/huiguang1214/" class="  ">[已注销]</a> 
+        </div>
+
+
+        
+        <p class="">小学偶像</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u2708763 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="92030200" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除[已注销]的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=94299607 data-cid="94299607" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/49901878/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u49901878-26.jpg" alt="猫空·纪"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2012-01-18 09:32:35</span>
+          <a href="http://movie.douban.com/people/49901878/" class="  ">猫空·纪</a> 
+        </div>
+
+
+        
+        <p class="">生日快乐</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u49901878 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="94299607" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除猫空·纪的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=100121460 data-cid="100121460" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/Passio_nuova/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u59037448-108.jpg" alt="Robin W."/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2012-03-28 18:29:37</span>
+          <a href="http://movie.douban.com/people/Passio_nuova/" class="  ">Robin W.</a>  (ლ(´ڡ`ლ)，)
+        </div>
+
+
+        
+        <p class="">我爱。</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u59037448 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="100121460" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除Robin W.的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=101918381 data-cid="101918381" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/sherriesherrie/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u48411901-8.jpg" alt="兔纸君"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2012-04-17 20:38:01</span>
+          <a href="http://movie.douban.com/people/sherriesherrie/" class="  ">兔纸君</a>  (hysteria)
+        </div>
+
+
+        
+        <p class="">帅的一塌糊涂</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u48411901 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="101918381" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除兔纸君的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=115512473 data-cid="115512473" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/58065596/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u58065596-15.jpg" alt="Cessna"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2012-10-01 01:20:28</span>
+          <a href="http://movie.douban.com/people/58065596/" class="  ">Cessna</a> 
+        </div>
+
+
+        
+        <p class="">好好唱歌！！！</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u58065596 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="115512473" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除Cessna的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=120524207 data-cid="120524207" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/57973758/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u57973758-10.jpg" alt="一缕风的花期"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2012-12-15 22:24:15</span>
+          <a href="http://movie.douban.com/people/57973758/" class="  ">一缕风的花期</a>  (青春就是活的像自己。)
+        </div>
+
+
+        
+        <p class="">杰伦~~❤</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u57973758 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="120524207" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除一缕风的花期的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=122025988 data-cid="122025988" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/liweixin/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u1478139-25.jpg" alt="黄方块儿"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2013-01-12 10:28:33</span>
+          <a href="http://movie.douban.com/people/liweixin/" class="  ">黄方块儿</a>  (KeanuReeves我男神)
+        </div>
+
+
+        
+        <p class="">杰伦鼻子好看~~</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u1478139 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="122025988" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除黄方块儿的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=124033948 data-cid="124033948" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/Goal27/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/u52141221-4.jpg" alt="Wissen27"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2013-02-21 20:16:12</span>
+          <a href="http://movie.douban.com/people/Goal27/" class="  ">Wissen27</a>  (生活即否定 否定即肯定)
+        </div>
+
+
+        
+        <p class="">当年的头像啊~</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u52141221 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="124033948" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除Wissen27的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+    
+
+<div class="comment-item" id=137616072 data-cid="137616072" data-target_id="826255312" data-target_kind="1025">
+    <div class="pic">
+        <a href="http://movie.douban.com/people/85310522/"><img width="48" height="48" class="" src="http://img3.douban.com/icon/user_normal.jpg" alt="SS早睡早起"/></a>
+    </div>
+    <div class="content report-comment">
+        <div class="author">
+          <span class="">2014-03-29 00:43:07</span>
+          <a href="http://movie.douban.com/people/85310522/" class="  ">SS早睡早起</a> 
+        </div>
+
+
+        
+        <p class="">无与伦比 是我这辈子对你唯一的态度！</p>
+
+        <div class="op-lnks">
+        </div>
+
+        <div class="group_banned">
+            <span class="gact hidden p_u85310522 p_admin p_intern fright">&gt;
+                
+    
+    <form method="POST" action="http://movie.douban.com/celebrity/1048000/photo/826255312/remove_comment" class="miniform"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+            <input type="hidden" name="start" value="0" />
+            <input type="hidden" name="cid" value="137616072" />
+        <input type="submit" class="minisubmit j a_confirm_link" value="删除" title="删除SS早睡早起的留言?" />
+    </form>
+
+            </span>
+        </div>
+    </div>
+</div>
+
+<div id="last"></div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    <h2>
+        你的回应
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+
+        <div class="comment-form txd" id="add_comment">
+
+        <form name="comment_form" method="post" action="add_comment"><div style="display:none;"><input type="hidden" name="ck" value="NOUW"/></div>
+          <div class="item">
+              <textarea name="rv_comment" rows="4" cols="64"></textarea><br/>
+          </div>
+            <input type="hidden" name="start" value="0"/>
+            <div class="item">
+                <span class="bn-flat-hot "><input type="submit" value="加上去"></span>
+            </div>
+        </form></div>
+
+
+ 
+
+ 
+
+    
+    
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+<script type="text/javascript" src="http://img3.douban.com/f/shire/17ffde78bc768c1de53c46d5b5f7fb7f5893c10e/js/report_dialog.js"></script>
+<link rel="stylesheet" type="text/css" href="http://img3.douban.com/f/shire/8adca47fea9ac369117af7c709cefe5bbdaf23ae/css/report_dialog.css" />
+
+
+<script>
+Do(function(){
+  $('#comments').find('.comment-item').hover(function(){$(this).addClass('over');}, function(){$(this).removeClass('over');});
+  $('.reply-quote .toggle-reply').click(function(e) {
+    e.preventDefault();
+    var el = $(this);
+    el.prevAll('span').toggle();
+    el.find('span').toggle();
+  });
+});
+</script>
+
+
+
+
+
+            </div>
+            <div class="aside">
+                
+    <div class="mod">
+        
+
+
+
+
+
+
+        <div class="slidebar clearfix">
+            <span class="btn-prev"><a href="http://movie.douban.com/celebrity/1048000/photo/826261674/">后退</a></span>
+            <div class="slide-wrap">
+                <ul class="clearfix">
+                                <li id="914785792">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/914785792/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p914785792.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="914785506">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/914785506/">
+                                <img src="http://img5.douban.com/view/photo/albumicon/public/p914785506.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="826262225">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/826262225/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p826262225.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="826261674">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/826261674/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p826261674.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="826255312" class="current">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/826255312/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p826255312.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="826255294">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/826255294/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p826255294.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="826255005">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/826255005/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p826255005.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="826254910">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/826254910/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p826254910.jpg" alt="" />
+                            </a>
+                            </li>
+                                <li id="826254870">
+                            <a href="http://movie.douban.com/celebrity/1048000/photo/826254870/">
+                                <img src="http://img3.douban.com/view/photo/albumicon/public/p826254870.jpg" alt="" />
+                            </a>
+                            </li>
+                </ul>
+            </div>
+            <span class="btn-next"><a href="http://movie.douban.com/celebrity/1048000/photo/826255294/">前进</a></span>
+        </div>
+    </div>
+    <div class="mod">
+        
+    <h2>
+        图片信息
+            &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+    </h2>
+
+        <ul class="poster-info">
+            <li>影人名称：<a href="http://movie.douban.com/celebrity/1048000/">周杰伦 Jay Chou</a></li>
+            <li class="pl">原图尺寸：475x473</li>
+            <li class="pl">文件大小：37.6KB</li>
+            <li class="pl">来自：<a href="http://movie.douban.com/people/15717801/">jackie bin</a></li>
+            <li class="pl">上传于2011-01-30</li>
+        </ul>
+        <p class="pl2">
+            &gt;&nbsp;<a href="http://movie.douban.com/celebrity/1048000/">去 周杰伦 影人页</a>
+        </p>
+    </div>
+    <!-- douban ad begin -->
+<div id="dale_movie_celebrity_photo_top_right"></div>
+<!-- douban ad end -->
+
+
+            </div>
+            <div class="extra">
+                
+    
+<div class="report" id="page-report"><a rel="nofollow" href="javascript:void(0)">举报不良信息</a></div>
+<script type="text/javascript" src="http://img3.douban.com/f/shire/17ffde78bc768c1de53c46d5b5f7fb7f5893c10e/js/report_dialog.js"></script>
+<link rel="stylesheet" type="text/css" href="http://img3.douban.com/f/shire/8adca47fea9ac369117af7c709cefe5bbdaf23ae/css/report_dialog.css" />
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="footer">
+            <div class="footer-extra"></div>
+        
+
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2014 douban.com, all rights reserved
+</span>
+
+<span class="fright">
+    <a href="http://www.douban.com/about">关于豆瓣</a>
+    · <a href="http://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="http://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="http://www.douban.com/about?policy=disclaimer">免责声明</a>
+    
+    · <a href="http://movie.douban.com/help/">帮助中心</a>
+    · <a href="http://developers.douban.com/" target="_blank">开发者</a>
+    · <a href="http://www.douban.com/mobile/movie">手机电影</a>
+    · <a href="http://www.douban.com/partner/">豆瓣广告</a>
+</span>
+
+
+    </div>
+
+    </div>
+    <script type="text/javascript">
+    Do(function() {
+      // 不再提醒
+      Douban.init_delete_reply_notify=function(b){var a=function(g){g.preventDefault();var c=$(g.target);var h=c[0].href.split("#")[1];$.get("/j/accounts/remove_notify?id="+h);var d=c.closest(".item-req");if($.contains($(".top-nav-reminder")[0],d[0])){d=d.parent();var f=d.siblings().length;d.fadeOut(function(){d.remove()});if(f===0){d.closest(".bd").find(".no-new-notis").show()}}else{d.fadeOut()}};if(b.type==="click"){a(b)}else{$(b).click(a)}};
+      Douban.init_discard_notify=function(b){var a=function(i){i.preventDefault();var c="/j/notification/discard";var f=$(i.target);var d=f[0].name;$.post_withck(c,{id:d},function(e){},"json");var g=f.closest(".item-req");if($.contains($(".top-nav-reminder")[0],g[0])){g=g.parent();var h=g.siblings().length;g.fadeOut(function(){g.remove()});if(h===0){g.closest(".bd").find(".no-new-notis").show()}}else{g.fadeOut()}};if(b.type==="click"){a(b)}else{$(b).click(a)}};
+
+      var notimenu = $('#top-nav-notimenu');
+      notimenu.bind('moreitem:show', function() {
+        $.ajax({
+          url: 'http://www.douban.com/j/notification/nav_pop',
+          data: {
+            ck: get_cookie('ck'),
+            k: '56579101:94508e4f29140a2546195acd0769cb07da2ef862',
+            from_push: notimenu.data('from_push')
+          },
+          dataType: 'jsonp',
+          success: function(e) {
+            if (e.r) {
+              return;
+            }
+            notimenu.html(e.s);
+            if (e.n === 0) {
+              $('#db-global-nav .top-nav-reminder .num').remove();
+            } else {
+              $('#db-global-nav .top-nav-reminder .num span').html(e.n);
+            }
+            set_cookie({push_noty_num: e.n});
+            if (window.load_event_monitor) {
+              load_event_monitor($('#db-global-nav'));
+            }
+          }
+        });
+      });
+
+      window.DOUBAN_SITE_URL = 'http://www.douban.com';
+        var current_noty_num=current_doumail_num=0;function updateNotyNum(b){current_noty_num=b;var a=$("#db-global-nav .top-nav-reminder");if(!b){a.find(".num").remove();return}var c=a.find(".num span");if(!c.length){a.append('<span class="num"><span>'+b+"</span><i></i></span>")}else{c.html(b)}if(b>0&&b<10){a.css("margin-right","5px")}else{if(b>10){a.css("margin-right","15px")}}}function updateDoumailNum(b){current_doumail_num=b;var c=$("#top-nav-doumail-link");var a=c.find("em");if(!b){a.remove();return}var d="("+b+")";if(!a.length){c.append("<em>"+d+"</em>")}else{a.html(d)}}function addCheckNotyLog(){$("#top-nav-notimenu").data("from_push","Y")}function addCheckDoumailLog(c){var b=document.getElementById("top-nav-doumail-link");b.onclick=function(){moreurl(this,{from:"check_doumail_from_push",uid:c})}}function showDesktopNotification(c){if(!window.Notification){return}var b=get_cookie("enable_push_desktop_noty");b=b=="1";if(!b){return}var a="";if(c.type=="notification"){a="你收到一个新提醒"}else{if(c.type=="doumail"){a="你收到一封新豆邮"}else{return}}var d=new Notification("豆瓣",{body:a,tag:c.id,icon:"http://img3.douban.com/pics/icon/dou36.png"});d.onclick=function(){window.focus();this.close()};d.onshow=function(){setTimeout(function(){d.close()},3000)}}function get_auth_token(a){$.ajax({url:DOUBAN_SITE_URL+"/j/push/get_token_with_ts",dataType:"jsonp",success:function(b){a(b.token,b.timestamp)}})}var timer=null;function startSyncNotyNumsCrossTabs(){clearTimeout(timer);timer=setTimeout(function(){var b=parseInt(get_cookie("push_noty_num")||"0",10),a=parseInt(get_cookie("push_doumail_num")||"0",10);if(b!=current_noty_num){updateNotyNum(b)}if(a!=current_doumail_num){updateDoumailNum(a)}if(!b&&!a){clearTimeout(timer)}else{timer=setTimeout(arguments.callee,1500)}},1500)}var retry_times=0,max_retry=50,retry_interval_unit=1000*3;function connectSSE(b,a,g){if(!window.EventSource){return}var d="notification:user:"+b,c=(b+"_"+g)+":"+a,i="http://push.douban.com:4394/sse?channel="+d+"&auth="+c;var f=null;try{f=new EventSource(i)}catch(h){return}f.addEventListener("open",function(){retry_times=0},false);f.addEventListener("error",function(j){if(this.readyState==EventSource.CLOSED||this.readyState==EventSource.CONNECTING){f.close();f=null;setTimeout(function(){retry_times+=1;if(retry_times<max_retry){get_auth_token(function(e,k){connectSSE(b,e,k)})}},retry_times*retry_interval_unit)}},false);f.addEventListener("message",function(k){var j=JSON.parse(k.data);if(j.type=="notification"){updateNotyNum(j.num);addCheckNotyLog();set_cookie({push_noty_num:j.num})}else{if(j.type=="doumail"){updateDoumailNum(j.num);addCheckDoumailLog(b);set_cookie({push_doumail_num:j.num})}}startSyncNotyNumsCrossTabs();showDesktopNotification(j)},false)};
+        
+        connectSSE('56579101', '4ffbd1eff956166e16b83db751c2820990b7525d', '1407755794');
+        
+        set_cookie({
+          push_noty_num: 0,
+          push_doumail_num: 4
+        });
+          startSyncNotyNumsCrossTabs();
+
+    });
+    </script><script type="text/javascript" src="http://img3.douban.com/misc/mixed_static/6ffafde870ce4bd8.js"></script><script type="text/javascript">
+    Do = (typeof Do === 'undefined')? $ : Do;
+    var div = ".op-lnks";
+    function addReportLink(){
+      $.each($("#comments .comment-item ".concat(div)), function(i, el){
+          if ($(el).find(".comment-report").length==0){
+            $(el).append('<div class="comment-report"><a rel="nofollow" href="javascript:void(0)">举报</a></div>');
+          }
+      });
+    };
+    Do(function(){
+        $("#comments").delegate(".comment-item", 'mouseenter mouseleave', function (e) {
+          switch (e.type) {
+            case "mouseenter":
+              $(this).find(".comment-report").css('visibility', 'visible');
+              break;
+            case "mouseleave":
+              $(this).find(".comment-report").css('visibility', 'hidden');
+              break;
+          }
+        });
+        $("#comments").delegate(".comment-report a", 'click', function (e) {
+        e.preventDefault();
+        var auditUrl = "http://www.douban.com/misc/audit_report?url=",
+            opt = "comment_id";
+        var obj = $(e.target).closest('.comment-item');
+        var cid = obj.data("cid");
+        var url = "http://movie.douban.com/celebrity/1048000/photo/826255312/?".concat(opt, '=', cid);
+        generate_report_dialog({report_url: url});
+        });
+    addReportLink();
+    });
+</script><script type="text/javascript">
+       Do = (typeof Do === 'undefined')? $ : Do;
+       Do(function(){
+        $("#page-report").delegate("a", 'click', function(e){
+            var auditUrl = "http://www.douban.com/misc/audit_report?url=";
+            var url = "http://movie.douban.com/celebrity/1048000/photo/826255312/";
+            generate_report_dialog({report_url: url});
+        })
+    });
+</script>
+    
+<!-- douban ad begin -->
+
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = 'http://erebor.douban.com/',
+            userId = '56579101',
+            browserId = 'bZuJb5c2bSc',
+            ipAddress = '123.125.116.232',
+            criteria = '3:/celebrity/1048000/photo/826255312/',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_movie_celebrity_photo_top_right'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, ip: ipAddress, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', 'http://img3.douban.com/f/shire/55c9fe0e9ecb5725037e9839fc515504008dae74/js/ad.js');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- douban ad end -->
+<script>
+    $('#edi').click(function(){
+      $('form .error-tip').hide();
+    });
+    /**
+     * @form 是表单的 jquery 对象
+     * @data 是需要验证的字符串
+     * @callback 是验证有敏感词时的回调函数
+     */
+    function checkBannedKeyword(form, data, callback){
+        $.post_withck('/j/censor', data, function(ret){
+            if(ret.ban == true){
+                callback();
+                return false;
+            }else{
+                form.submit();
+            }
+        }, 'json');
+    }
+    $('input[id=sub_desc]').click(function(e){
+        e.preventDefault();
+        var $textarea = $('form#desc_edit textarea'),
+            data = {key: $textarea.val()};
+        checkBannedKeyword($('form#desc_edit'), data, function(){
+            $('form#desc_edit').append($('<div class="error-tip" style="width:360px;color:#ff3300;">你的图片描述中有被禁止的内容</div>'));
+        });
+    });
+</script>
+
+    
+  
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; 
+    g.type='text/javascript';
+    g.defer=true; 
+    g.async=true; 
+    g.src=p+'://s.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-19', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id]);
+      _gaq.push([method('_setSampleRate'), '60']);
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '1', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- hador13-->
+
+  <script>_SPLITTEST=''</script>
+
+<script>var _check_hijack = function () {
+    var _sig = "bZuJb5c2", _login = true, bid = get_cookie('bid');
+    if (location.protocol != "file:" && (
+            typeof(bid) != "string" && _login ||
+            typeof(bid) == "string" && bid.substring(0,8) != _sig)) {
+        location.href += (/\?/.test(location.href)?"&":"?") + (
+                "_r=" + Math.random().toString(16).substring(2));
+    }};
+if (typeof(Do) != 'undefined') Do(_check_hijack);
+else if (typeof(get_cookie) != 'undefined') _check_hijack();
+</script></body>
+
+</html>
+
+
